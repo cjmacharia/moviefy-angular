@@ -1,0 +1,28 @@
+<div class="container">
+	<mat-card class="example-card">
+		<mat-card-header>
+		</mat-card-header>
+		<mat-card-content>
+			<form class="example-form">
+				<table class="example-full-width" cellspacing="0" *ngFor="let track of tracks.data" [style.background-image]="'url(//www.api.what-song.com' +track.banner + ')'">
+					<tr>
+						<td>{{track.songName}}</td>
+					</tr>
+					<tr>
+						<td>
+							<iframe #spotifyPlayer width="100%" height="100px" frameborder="0" allowtransparency="true" allow="encrypted-media" [src]="safeURL(track.spotify)"></iframe>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button (click)="favorite(track.id)" mat-button>favorite</button>
+							<button mat-button>SHARE</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+
+			<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+		</mat-card-content>
+	</mat-card>
+</div>

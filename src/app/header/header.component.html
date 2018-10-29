@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<span>Welcome to moviefy</span>
+		<button routerLink="/browse" mat-stroked-button color="success">browse</button>
+		<button routerLink="/favorites" mat-stroked-button color="success">favorites</button>
+		<app-search></app-search>
+		<span class="example-spacer"></span>
+		<button mat-button [matMenuTriggerFor]="menu">authenticate</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item routerLink="/login">login</button>
+			<button mat-menu-item routerLink="/register">Register</button>
+		</mat-menu>
+	</mat-toolbar-row>
+</mat-toolbar>
+<button mat-button color="accent"> basic </button>
