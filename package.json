@@ -4,6 +4,8 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "npm run link && ng build && node server.js",
+		"postinstall": "ng build --prod",
+		"preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
 		"build": "ng build",
 		"test": "ng test",
 		"lint": "ng lint",
