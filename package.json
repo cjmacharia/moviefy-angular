@@ -3,10 +3,11 @@
 	"version": "0.0.0",
 	"scripts": {
 		"ng": "ng",
-		"start": "ng build && node server.js",
+		"start": "npm run link && ng build && node server.js",
 		"build": "ng build",
 		"test": "ng test",
 		"lint": "ng lint",
+		"link": "npm link @angular/cli",
 		"e2e": "ng e2e"
 	},
 	"private": true,
