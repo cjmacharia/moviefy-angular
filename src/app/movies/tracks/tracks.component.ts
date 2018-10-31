@@ -12,6 +12,10 @@ import { error } from 'util';
 export class TracksComponent implements OnInit {
 	tracks: any;
 	id: any;
+	banner: any;
+	rating: any;
+	title: any;
+	trailer: any;
 	constructor(private route: ActivatedRoute, private service: MoviefyService, public sanitizer: DomSanitizer) {
 		this.tracks = []
 	}
@@ -21,22 +25,28 @@ export class TracksComponent implements OnInit {
 		this.getTracks()
 	}
 
+	safeVideoURL(trailer) {
+		console.log(trailer)
+		return this.sanitizer.bypassSecurityTrustResourceUrl(`//www.youtube.com/embed/${trailer}`)
+	}
+
 	safeURL(trackId): SafeResourceUrl {
-		const mash = this.sanitizer.bypassSecurityTrustResourceUrl(`//open.spotify.com/embed/track/${trackId}`);
-		console.log(mash)
 		return this.sanitizer.bypassSecurityTrustResourceUrl(`//open.spotify.com/embed/track/${trackId}`);
 	}
 
 	safeImage(image): SafeResourceUrl {
-		const cj = this.sanitizer.bypassSecurityTrustResourceUrl(`www.api.what-song.com${image}`);
-		console.log(cj, 'LLLLLL')
 		return this.sanitizer.bypassSecurityTrustResourceUrl(`www.api.what-song.com${image}`);
 	}
 
 	getTracks() {
 		this.service.getTracks(this.id).subscribe(data => {
 			this.tracks = data;
-			console.log(this.tracks.data)
+			this.banner = this.tracks.data[0].poster;
+			this.rating = this.tracks.data[0].imdbratings;
+			this.title = this.tracks.data[0].title;
+			this.trailer = this.tracks.data[0].trailer;
+
+
 		})
 	}
 	favorite(id) {

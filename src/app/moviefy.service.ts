@@ -35,7 +35,7 @@ export class MoviefyService {
 		const httpOptions = {
 			headers: new HttpHeaders({
 				'Content-Type': 'application/json',
-				'Authorization': 'Bearer BQD1G-TlJVO5_D7saAyDvYJJoiPjMYe7KqGfRSdmZGigw_tOwNgdUDd8xJroYwOoIdAajiTRDxiRxnoI_XU3-gtEcfd_O7Oivf0PR5ZMupA5iWpkxqHyzOsgxQ7nzZWuiyyXIXBRW6NBJ6z_B2idSemJWhgal5QcwZyo4QWen1IJWdgnAHzLn-WY_I8kpxQU9lV540qyjuoxtcESupdn9LHVtun6h2DfWZx7xnrhlli8KxWpWif4aTys6Cq0jezpWorqZxydmm08Ut6HUBz5OLSge4Ob0ywBIhbGDdM'
+				'Authorization': 'N9OMJAxhHI5aNNUcM3FdVRQrrpRrjp0pgxzrtl3EUqLxAdGC'
 			})
 		};
 		return this.httpClient.get(`https://api.spotify.com/v1/tracks/${id}`, httpOptions);
@@ -61,5 +61,8 @@ export class MoviefyService {
 
 	favorites() {
 		return this.httpClient.get(`${API_URL}/favorites`);
+	}
+	banner(id) {
+		return this.httpClient.get(`//www.api.what-song.com/banner-movie?movieID=${id}`)
 	}
 }
