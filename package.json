@@ -5,11 +5,9 @@
 		"ng": "ng",
 		"start": "ng build && node server.js",
 		"build": "ng build",
-		"heroku": "ng build && node server.js",
 		"test": "ng test",
 		"lint": "ng lint",
-		"e2e": "ng e2e",
-		"postinstall": "ng build --aot -prod"
+		"e2e": "ng e2e"
 	},
 	"private": true,
 	"dependencies": {
