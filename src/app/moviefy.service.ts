@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 
 const API_URL = environment.apiUrl;
 

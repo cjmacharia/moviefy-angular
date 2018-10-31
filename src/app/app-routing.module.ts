@@ -1,6 +1,5 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
-import { SearchComponent } from './movies/search/search.component';
 import { TracksComponent } from './movies/tracks/tracks.component';
 import { BrowseComponent } from './movies/browse/browse.component';
 import { MoviesComponent } from './movies/movies.component';
