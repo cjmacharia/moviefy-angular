@@ -14,6 +14,7 @@ export class TokenInterceptorService implements HttpInterceptor {
 				token: localStorage.getItem('token')
 			}
 		})
+		console.log(tokenReq, '....')
 		return next.handle(tokenReq);
 	}
 }
