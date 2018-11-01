@@ -1,5 +1,5 @@
 # MoviefyAngular
-
+[![CircleCI](https://circleci.com/gh/cjmash/moviefy-angular/tree/master.svg?style=svg)](https://circleci.com/gh/cjmash/moviefy-angular/tree/master) [![codecov](https://codecov.io/gh/cjmash/moviefy-angular/branch/master/graph/badge.svg)](https://codecov.io/gh/cjmash/moviefy-angular)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
 
 ## Development server
