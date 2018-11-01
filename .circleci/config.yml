@@ -13,6 +13,6 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run: npm install
-
       - run: npm run test
-      - run: cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+      -run: bash <(curl -s https://codecov.io/bash)
+      
