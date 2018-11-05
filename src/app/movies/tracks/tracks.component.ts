@@ -26,7 +26,6 @@ export class TracksComponent implements OnInit {
 
 	ngOnInit() {
 		this.id = this.route.snapshot.params.id;
-		this.spinner.show();
 		this.getTracks()
 	}
 
@@ -43,8 +42,10 @@ export class TracksComponent implements OnInit {
 	}
 
 	getTracks() {
+    this.spinner.show();
 		this.service.getTracks(this.id).subscribe(data => {
 			this.tracks = data;
+      this.spinner.hide();
 			this.poster = this.tracks.data[0].poster;
 			this.rating = this.tracks.data[0].imdbratings;
 			this.title = this.tracks.data[0].title;
@@ -52,7 +53,6 @@ export class TracksComponent implements OnInit {
 			this.banner = this.tracks.data[0].banner;
 			this.actors = this.tracks.data[0].actors;
 			this.plot = this.tracks.data[0].plot;
-			this.spinner.hide();
 		})
 	}
 	favorite(id) {
