@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
 			error => {
 				this.spinner.hide();
 				this.errors = error;
-				console.log(this.errors, '????????')
 			})
 	}
 }
