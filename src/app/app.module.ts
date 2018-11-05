@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -14,12 +14,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisplayComponent } from './movies/display/display.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { MoviefyService } from './moviefy.service';
 import { CommonModule } from '@angular/common';
 import { TracksComponent } from './movies/tracks/tracks.component';
 import { BrowseComponent } from './movies/browse/browse.component';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FavoritesComponent } from './movies/favorites/favorites.component';
+import { HomeComponent } from './movies/home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { ErrorHandlerService } from './error-handler.service';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -27,12 +31,14 @@ import { FavoritesComponent } from './movies/favorites/favorites.component';
 		MoviesComponent,
 		LoginComponent,
 		RegisterComponent,
+		FooterComponent,
 		HeaderComponent,
 		SearchComponent,
 		DisplayComponent,
 		TracksComponent,
 		BrowseComponent,
-		FavoritesComponent
+		FavoritesComponent,
+		HomeComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -40,6 +46,7 @@ import { FavoritesComponent } from './movies/favorites/favorites.component';
 		ReactiveFormsModule,
 		myCustomMaterial,
 		CommonModule,
+		NgxSpinnerModule,
 		AppRoutingModule,
 		FormsModule,
 		HttpClientModule
@@ -50,7 +57,9 @@ import { FavoritesComponent } from './movies/favorites/favorites.component';
 		multi: true
 
 
-	}],
+	}, ErrorHandlerService, {
+			provide: ErrorHandler, useClass: ErrorHandlerService
+		}],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

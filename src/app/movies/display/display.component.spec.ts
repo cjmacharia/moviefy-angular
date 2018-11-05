@@ -27,4 +27,11 @@ describe('DisplayComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy();
 	});
+
+	it('should have a title', () => {
+		const element = fixture.nativeElement;
+		const c = fixture.debugElement.query
+		console.log(c, 'kiki do you love me voooo')
+	})
+
 });

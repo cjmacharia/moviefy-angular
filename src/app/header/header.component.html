@@ -1,15 +1,20 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="blue" style="position: fixed; background: pink; z-index: 1000;
+margin-bottom: 0;">
 	<mat-toolbar-row>
-		<span>Welcome to moviefy</span>
-		<button routerLink="/browse" mat-stroked-button color="success">browse</button>
-		<button routerLink="/favorites" mat-stroked-button color="success">favorites</button>
+		<a routerLink="/" class="moviefy">moviefy</a>
+		<a routerLink="/browse" class="browse">browse</a>
+		<a routerLink="/favorites" class="favorites">favorites</a>
 		<app-search></app-search>
 		<span class="example-spacer"></span>
-		<button mat-button [matMenuTriggerFor]="menu">authenticate</button>
+		<mat-icon [matMenuTriggerFor]="menu">perm_identity</mat-icon>
 		<mat-menu #menu="matMenu">
-			<button mat-menu-item routerLink="/login">login</button>
-			<button mat-menu-item routerLink="/register">Register</button>
+			<button mat-menu-item data-toggle="modal" data-target="#loginModal">
+				login
+			</button>
+			<button mat-menu-item data-toggle="modal" data-target="#registerModal">Register</button>
 		</mat-menu>
 	</mat-toolbar-row>
 </mat-toolbar>
-<button mat-button color="accent"> basic </button>
+
+<app-login class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true"></app-login>
+<app-register class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true"></app-register>

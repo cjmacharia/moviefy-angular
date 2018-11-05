@@ -6,3 +6,209 @@
 .example-spacer {
   flex: 2 1 auto;
 }
+
+a.browse {
+	margin-left: 50px;
+	color: white;
+	text-decoration: none;
+}
+
+a.favorites {
+	margin-left: 100px;
+	color: white;
+	text-decoration: none;
+}
+a.moviefy {
+	color: white;
+	text-decoration: none;
+}
+section.section-moviefy {
+	background-image: linear-gradient(-137deg, #1F0055 0%, #E50071 100%);
+	padding: 200px 0 100px 0;
+}
+
+div.col-md-9 {
+	animation-delay: 0.7s;
+	animation-name: fadeInUp;
+}
+
+h4 {
+	font-size: 55px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 79px;
+	font-weight: 800;
+}
+
+.large-circle {
+	background-image: linear-gradient(-199deg, #E50071 0%, #1F0043 100%);
+	box-shadow: 0 5px 56px 0 rgba(185,0,103,0.27);
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	top: -26px;
+	left: 14px;
+}
+
+.small-cirlce {
+	opacity: 0.63;
+	background-image: linear-gradient(42deg, #E50071 0%, #1F0043 100%);
+	box-shadow: 0 5px 56px 0 rgba(255,18,85,0.17);
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 6;
+	bottom: -34px;
+	left: -38px;
+}
+
+span.header-headphones {
+	background-image: linear-gradient(42deg, #E50071 0%, #1F0043 100%);
+    box-shadow: 0 5px 56px 0 rgba(255,18,85,0.17);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 7;
+    top: -34px;
+    left: 199px;
+}
+img.main-image{ 
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	z-index: 5;
+}
+
+div.content {
+	opacity: 1;
+	width: 13952px;
+	color: aqua
+
+}
+
+.movie-cards {
+	width: 376px;
+	height: 300px;
+	margin-top: 200px;
+	background-color: white;
+}
+.movie-card {
+	position: relative;
+	padding: 5px 0;
+	border-radius: 6px;
+	height: 350px;
+	background-color: #fff;
+	box-shadow: 0 6px 30px 0 rgba(190, 190, 190, 0.29);
+	-webkit-box-shadow: 0 6px 30px 0 rgba(190, 190, 190, 0.29);
+	-moz-box-shadow: 0 6px 30px 0 rgba(190, 190, 190, 0.29);
+	transition: all 300ms ease;
+}
+.movie-heading {
+    position: relative;
+    margin-bottom: 20px;
+
+}
+.movie-card-box {
+	position: relative;
+	padding: 5px 0;
+	margin-top: 100px;
+	border-radius: 6px;
+}
+.the-content {
+	background-color: seashell;
+}
+.movie-card-heading {
+    height: 150px;
+    background: #E50071;
+    background: -webkit-linear-gradient(to right, #E50071 , #1F0043);
+    background: linear-gradient(to right, #E50071 , #1F0043);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.movie-card-circle {
+	position: relative;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	min-width: 0;
+	justify-content: center;
+	margin-top: -120px;
+}
+.movie-card-cirle{
+	background-image: linear-gradient(42deg, #1F0043 0%, #E50071 100%);
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+	margin-left: 10px;
+	margin-top: 13px;
+}
+.img-movie-card {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	z-index: 6;
+}
+img.movie-image {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.title-caption {
+	font-size: 25px;
+	color: #222325;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 50px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+p {
+	margin-left: 40px;
+}
+img.logo{
+	height: 60px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+section.social {
+	background-image: linear-gradient(-137deg, #1F0043 0%, #E50071 100%);
+	margin-top: 70px;
+	height: 90px;
+}
+.icon {
+	margin: 40px 30px 40px 250px;
+	font-size: 30px;
+	color: white
+}
+
+footer.section-footer {
+	padding: 50px;
+	background-color: seashell
+}
+li {
+	list-style: none;
+	position: relative;
+}

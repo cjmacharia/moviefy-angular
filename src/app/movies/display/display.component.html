@@ -1,4 +1,4 @@
-<div class="container" *ngFor="let movie of movies.data">
+<!-- <div class="container" *ngFor="let movie of movies.data">
 	<mat-card class="example-card">
 		<mat-card-header>
 			<div mat-card-avatar class="example-header-image"></div>
@@ -11,4 +11,56 @@
 			<button mat-button>SHARE</button>
 		</mat-card-actions>
 	</mat-card>
+</div> -->
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+	<p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div class="wrapper">
+	<div class="background">
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 browse">
+				<div class="posts">
+					<div class="row">
+						<div *ngIf="error">
+							<div class="alert alert-danger col-md-12" role="alert">
+								{{error.error}}
+							</div>
+						</div>
+						<b class="main" *ngIf="movies.data">this are the results from the search</b>
+						<div class="col-md-6" *ngFor="let movie of movies.data">
+							<div class="movie-cards" routerLink="/tracks/{{movie._id}}">
+								<div class="movie-card">
+									<div class="movie-heading">
+										<div class="movie-card-heading">
+											<div class="movie-card-circle">
+												<div class="movie-card-cirle">
+													<div class="img-movie-card">
+														<img class="movie-image" src="https://www.what-song.com{{movie.poster_url}}">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="caption">
+										<h1 class="title-caption">{{movie.year}}</h1>
+										<p class="songs">
+											<i class="fa fa-music"></i>
+											listen to soundtracks from the movie
+											<b>{{movie.title}}</b>
+										</p>
+										<img class="logo" src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/092014/spotify_2014_0.png?itok=G4OTrLGf">
+										<img class="logo" src="https://1.bp.blogspot.com/-5xyNqP5DiOs/UhsqtOh78ZI/AAAAAAAAAlo/0KMQxRxZZqI/w1200-h630-p-k-no-nu/Logo+iTunes.JPG">
+										<img class="logo" src="https://i1.sndcdn.com/avatars-000131869186-my9qya-t500x500.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+<app-footer></app-footer>

@@ -6,11 +6,16 @@ import { MoviesComponent } from './movies/movies.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
 import { FavoritesComponent } from './movies/favorites/favorites.component';
+import { HomeComponent } from './movies/home/home.component';
 
 const routes: Route[] = [
 	{
-		path: '',
+		path: 'display',
 		component: MoviesComponent
+	},
+	{
+		path: '',
+		component: HomeComponent
 	},
 	{
 		path: 'login',
