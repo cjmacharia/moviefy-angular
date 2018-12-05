@@ -1,36 +1,60 @@
-<div class="container" style="background-image:\\banner">
-
-	<mat-grid-list cols="3">
-		<mat-grid-tile>
-			<img class="xs=4" src="{{banner}}"> </mat-grid-tile>
-		<mat-grid-tile>
-			<iframe width="100%" height="480" [src]="safeVideoURL(trailer)" frameborder="0" allowfullscreen></iframe>
-		</mat-grid-tile>
-		<mat-grid-tile>
-			<div class="movie-title xs=4">{{title}}</div>
-			<div class="movie-rating">ratings
-				<b>{{rating}}</b>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+	<p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div class="wrapper">
+	<div class="background">
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 browse">
+				<div class="posts">
+					<div class="row">
+						<div class="col-md-12">
+							<b class="main" style="margin-left: 200px">this are the soundtracks from the movie {{title}}</b>
+						</div>
+						<hr>
+						<div class="col-md-4">
+							<img src="{{poster}}">
+						</div>
+						<div class="col-md-4">
+							<iframe width="100%" height="100%" [src]="safeVideoURL(trailer)" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="col-md-4">
+							<div class="movie-rating">ratings
+								<b>{{rating}}</b>
+								<hr>
+								<span>
+									<i>Main actors</i>
+									<p>{{actors}}</p>
+								</span>
+								<hr>
+								<span>
+									<i>Movie plot</i>
+									<p>{{plot}}</p>
+								</span>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<table *ngFor="let track of tracks.data">
+						<tr>
+							<td>{{track.songName}}</td>
+						</tr>
+						<tr>
+							<td>
+								<iframe #spotifyPlayer width="500px" height="100px" frameborder="0" allowtransparency="true" allow="encrypted-media" [src]="safeURL(track.spotify)"></iframe>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button (click)="favorite(track.id)" mat-button>favorite</button>
+								<button mat-button>SHARE</button>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
-		</mat-grid-tile>
-	</mat-grid-list>
-
-	<form class="example-form">
-		<hr>
-		<table *ngFor="let track of tracks.data">
-			<tr>
-				<td>{{track.songName}}</td>
-			</tr>
-			<tr>
-				<td>
-					<iframe #spotifyPlayer width="100%" height="100px" frameborder="0" allowtransparency="true" allow="encrypted-media" [src]="safeURL(track.spotify)"></iframe>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<button (click)="favorite(track.id)" mat-button>favorite</button>
-					<button mat-button>SHARE</button>
-				</td>
-			</tr>
-		</table>
-	</form>
+		</div>
+	</div>
 </div>
+<app-footer></app-footer>

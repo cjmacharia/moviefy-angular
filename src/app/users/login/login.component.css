@@ -3,3 +3,12 @@
  margin-right: 300px;
  margin-top: 50px
 }
+
+.modal-dialog {
+	margin-top: 150px;
+}
+
+span.head {
+	margin-left: 150px;
+	font-size: 20px
+}

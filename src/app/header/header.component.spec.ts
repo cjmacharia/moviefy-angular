@@ -7,6 +7,9 @@ import { myCustomMaterial } from '../material';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from '../movies/search/search.component';
+import { LoginComponent } from '../users/login/login.component';
+import { RegisterComponent } from '../users/register/register.component';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent;
@@ -14,7 +17,7 @@ describe('HeaderComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [HeaderComponent, SearchComponent],
+			declarations: [HeaderComponent, SearchComponent, LoginComponent, RegisterComponent, NgxSpinnerComponent],
 			imports: [RouterTestingModule, FormsModule, myCustomMaterial, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule]
 		})
 			.compileComponents();

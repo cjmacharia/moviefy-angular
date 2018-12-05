@@ -7,6 +7,8 @@ import { myCustomMaterial } from '../material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerComponent } from 'ngx-spinner';
+import { FooterComponent } from '../footer/footer.component';
 
 describe('MoviesComponent', () => {
 	let component: MoviesComponent;
@@ -14,7 +16,7 @@ describe('MoviesComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [MoviesComponent,
+			declarations: [MoviesComponent, NgxSpinnerComponent, FooterComponent,
 				DisplayComponent],
 			imports: [FormsModule, myCustomMaterial, RouterTestingModule, myCustomMaterial, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule]
 		})

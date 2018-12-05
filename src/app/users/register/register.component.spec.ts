@@ -6,26 +6,27 @@ import { myCustomMaterial } from '../../material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+	let component: RegisterComponent;
+	let fixture: ComponentFixture<RegisterComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-			declarations: [ RegisterComponent ],
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [RegisterComponent, NgxSpinnerComponent],
 			imports: [FormsModule, myCustomMaterial, RouterTestingModule, myCustomMaterial, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule]
-    })
-    .compileComponents();
-  }));
+		})
+			.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(RegisterComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

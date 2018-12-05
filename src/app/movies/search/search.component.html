@@ -1,11 +1,6 @@
 <form class="example-form">
 	<mat-form-field class="example-full-width">
 		<input [formControl]="searchMovie" name="movie" matInput placeholder="search">
+		<mat-icon routerLink="/display" (click)="getMovies()">search</mat-icon>
 	</mat-form-field>
-	<!-- <mat-error *ngIf="searchMovie.invalid">
-		Movie name is required
-	</mat-error> -->
-	<div class="button-row">
-		<button routerLink="" (click)="getMovies()" mat-stroked-button color="primary">Primary</button>
-	</div>
 </form>
