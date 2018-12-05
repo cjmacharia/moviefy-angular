@@ -4,6 +4,7 @@ import { MoviefyService } from '../../moviefy.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { error } from 'util';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ErrorHandlerService } from '../../error-handler.service';
 declare var jQuery: any;
 @Component({
 	selector: 'app-tracks',
@@ -20,7 +21,7 @@ export class TracksComponent implements OnInit {
 	plot: any;
 	poster: any;
 	trailer: any;
-	constructor(private route: ActivatedRoute, private service: MoviefyService, public sanitizer: DomSanitizer, private spinner: NgxSpinnerService) {
+	constructor(private route: ActivatedRoute, private service: MoviefyService, private errorService: ErrorHandlerService, public sanitizer: DomSanitizer, private spinner: NgxSpinnerService) {
 		this.tracks = []
 	}
 

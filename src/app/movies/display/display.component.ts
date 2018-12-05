@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviefyService } from '../../moviefy.service';
-import { SearchComponent } from '../search/search.component';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { error } from 'util';
+import { ErrorHandlerService } from '../../error-handler.service';
 @Component({
 	selector: 'app-display',
 	templateUrl: './display.component.html',
@@ -11,7 +10,7 @@ import { error } from 'util';
 export class DisplayComponent implements OnInit {
 	movies: any;
 	error: any;
-	constructor(private moviefyService: MoviefyService, private spinner: NgxSpinnerService) {
+	constructor(private moviefyService: MoviefyService, private errorService: ErrorHandlerService, private spinner: NgxSpinnerService) {
 		this.movies = {}
 	}
 	ngOnInit() {
@@ -23,12 +22,6 @@ export class DisplayComponent implements OnInit {
 		this.moviefyService.currentMovie.subscribe(data => {
 			this.movies = data
 			this.spinner.hide();
-		},
-			error => {
-				console.log('here')
-				this.spinner.hide();
-				this.error = error
-				console.log(this.error, '>>>>>>>>>')
-			});
+		})
 	}
 }

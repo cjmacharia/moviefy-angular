@@ -6,6 +6,7 @@ import { myCustomMaterial } from '../../material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 describe('LoginComponent', () => {
 	let component: LoginComponent;
@@ -13,7 +14,7 @@ describe('LoginComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [LoginComponent],
+			declarations: [LoginComponent, NgxSpinnerComponent],
 			imports: [FormsModule, myCustomMaterial, RouterTestingModule, myCustomMaterial, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule]
 		})
 			.compileComponents();
