@@ -6,9 +6,9 @@
 		"start": "npm update  && node server.js",
 		"start-dev": "npm run link && ng build && node server.js",
 		"postinstall": "ng build --prod",
-		"preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
+		"preinstall": "sudo npm install -g @angular/cli @angular/compiler-cli typescript",
 		"build": "ng build",
-		"test": "ng test --watch=true --code-coverage",
+		"test": "ng test --watch=false --code-coverage ",
 		"lint": "ng lint",
 		"link": "npm link @angular/cli",
 		"e2e": "ng e2e"
