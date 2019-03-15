@@ -3,7 +3,9 @@ find live application here
 
 https://angularmoviefy.herokuapp.com
 
-[![CircleCI](https://circleci.com/gh/cjmash/moviefy-angular/tree/master.svg?style=svg)](https://circleci.com/gh/cjmash/moviefy-angular/tree/master) [![codecov](https://codecov.io/gh/cjmash/moviefy-angular/branch/master/graph/badge.svg)](https://codecov.io/gh/cjmash/moviefy-angular)
+[![CircleCI](https://circleci.com/gh/cjmash/moviefy-angular/tree/master.svg?style=svg)](https://circleci.com/gh/cjmash/moviefy-angular/tree/master)  [![Test Coverage](https://api.codeclimate.com/v1/badges/5feb2f3d42ee47680233/test_coverage)](https://codeclimate.com/github/cjmash/moviefy-angular/test_coverage)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
 
 ## Development server

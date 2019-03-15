@@ -13,6 +13,16 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run: npm install
-      - run: npm run test
-      - run: bash <(curl -s https://codecov.io/bash)
+      # - run: npm run test
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run TSM Compliance Test Suites
+          command: |
+            ./cc-test-reporter before-build
+             npm run test
+            ./cc-test-reporter after-build --exit-code $?
       

@@ -6,10 +6,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { myCustomMaterial } from '../../material';
+import { MoviefyService } from '../../moviefy.service';
+import { Observable } from 'rxjs';
 describe('FavoritesComponent', () => {
   let component: FavoritesComponent;
   let fixture: ComponentFixture<FavoritesComponent>;
-
+  var service: MoviefyService;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
 			declarations: [ FavoritesComponent ],

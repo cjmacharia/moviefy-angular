@@ -54,7 +54,6 @@ export class MoviefyService {
 				'token': localStorage.getItem('token')
 			})
 		};
-		console.log(token)
 		return this.httpClient.get(`${API_URL}/favorite/${id}`, token);
 	}
 

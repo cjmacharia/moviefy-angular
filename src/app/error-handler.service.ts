@@ -8,9 +8,6 @@ export class ErrorHandlerService implements ErrorHandler {
 		if (error instanceof HttpErrorResponse) {
 			console.error(error.status, 'status code');
 			console.error(error.error, 'error message');
-
-		} else {
-			console.error('An error occurred:', error.message);
-		}
+		} 
 	}
 }
